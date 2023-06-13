@@ -5,9 +5,8 @@ function Person(name, age) {
 }
 
 Person.prototype.greet = function() {
-  console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+  console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
 };
-
 
 function Employee(name, age, jobTitle) {
 Person.call(this, name, age);
@@ -23,10 +22,10 @@ Employee.prototype.jobGreet = function() {
   );
 };
 
-let person1 = new Person("harsha", 30);
+let person1 = new Person("Alice", 25);
 person1.greet(); 
 
-let employee1 = new Employee("Anitha", 25, "Engineer");
+let employee1 = new Employee("Bob", 30, "Manager");
 employee1.greet(); 
 employee1.jobGreet(); 
 
